@@ -1,0 +1,9 @@
+
+
+
+#Stop All CONTAINER
+docker ps | awk  '{print $1}' | xargs docker stop
+
+
+#Clean All CONTAINER
+docker ps -a | awk  '{print $1}' | xargs docker rm -vf
