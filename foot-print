@@ -1,6 +1,19 @@
 
 
 
+### ELK
+docker pull sebp/elk
+docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk sebp/elk
+
+
+### Gitlab
+wget https://raw.githubusercontent.com/sameersbn/docker-gitlab/master/docker-compose.yml
+docker-compose up
+# User root password new
+http://localhost:10080
+
+
+
 ### Zabbix
 docker run -d -P --name zabbix  berngp/docker-zabbix
 #A MySQL instance supporting Zabbix, user is zabbix and password is zabbix.
