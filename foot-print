@@ -1,3 +1,17 @@
 
-#1
-##2
+
+
+### Zabbix
+docker run -d -P --name zabbix  berngp/docker-zabbix
+#A MySQL instance supporting Zabbix, user is zabbix and password is zabbix.
+#A Monit deamon managing the processes (http://$container_ip:2812, user 'myuser' and password 'mypassword').
+http://[IP]:32770/
+#Web UI ,USER admin PASSWORD zabbix.
+http://[IP]:32771/zabbix
+
+
+
+
+### JIRA
+docker run --detach --publish 8080:8080 cptactionhank/atlassian-jira:latest
+#DONT HAVE LICENSE
